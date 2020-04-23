@@ -7,6 +7,9 @@ export interface Input {
   skipApprovalLabel: string;
   skipCILabel: string;
   requiredChecks: string[];
+  repo: string;
+  owner: string;
+  retroactiveApprovalLabel: string;
 }
 
 export function getInput(): Input {
@@ -20,5 +23,8 @@ export function getInput(): Input {
     slackHook: core.getInput('slack_hook', {
       required: true,
     }),
+    repo: core.getInput('repo'),
+    owner: core.getInput('owner'),
+    retroactiveApprovalLabel: core.getInput('retroactive_approval_label')
   };
 }

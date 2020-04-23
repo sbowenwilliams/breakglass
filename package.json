@@ -7,7 +7,8 @@
   "scripts": {
     "build": "make",
     "lint": "make lint",
-    "test": "jest"
+    "test": "jest",
+    "test:debug": "jest --watch --runInBand"
   },
   "repository": {
     "type": "git",

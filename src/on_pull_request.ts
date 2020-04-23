@@ -16,6 +16,7 @@ import { Input } from './input';
 export async function onPullRequest(octokit: github.GitHub, context, input: Input) {
   const { payload } = context;
 
+  debugger;
   if (payload.action === 'labeled') {
     await onLabel(octokit, context, input);
     return;
